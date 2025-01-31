@@ -1,0 +1,93 @@
+\doxysection{Huffman.\+h File Reference}
+\hypertarget{_huffman_8h}{}\label{_huffman_8h}\index{Huffman.h@{Huffman.h}}
+{\ttfamily \#include $<$iostream$>$}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{_huffman_8h_a20a21c1905c9909a9e9b1563759fc1d9}{get\+Commands}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]}, std\+::string \&input\+File, std\+::string \&output\+File, std\+::string \&dictionary\+File, char \&mode)
+\begin{DoxyCompactList}\small\item\em Funkcja przetwarza argumenty wiersza poleceń i weryfikuje ich poprawność. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_huffman_8h_abad8750dc3bbe44b783777199e66f91e}{compress\+File}} (std\+::string \&input\+File, std\+::string \&output\+File, std\+::string \&dictionary\+File)
+\begin{DoxyCompactList}\small\item\em Funkcja kompresuje plik za pomocą kodowania Huffmana. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_huffman_8h_a8c10b04d149a63cca525ebbbcd23d4de}{decompress\+File}} (std\+::string \&input\+File, std\+::string \&output\+File, std\+::string \&dictionary\+File)
+\begin{DoxyCompactList}\small\item\em Funkcja dekompresuje plik za pomocą kodowania Huffmana. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+Author Oleksandr Holobokov (\href{mailto:oh318935@student.polsl.pl}{\texttt{ oh318935@student.\+polsl.\+pl}}) \begin{DoxyDate}{Date}
+29.\+01.\+2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_huffman_8h_abad8750dc3bbe44b783777199e66f91e}\index{Huffman.h@{Huffman.h}!compressFile@{compressFile}}
+\index{compressFile@{compressFile}!Huffman.h@{Huffman.h}}
+\doxysubsubsection{\texorpdfstring{compressFile()}{compressFile()}}
+{\footnotesize\ttfamily \label{_huffman_8h_abad8750dc3bbe44b783777199e66f91e} 
+void compress\+File (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input\+File}{, }\item[{std\+::string \&}]{output\+File}{, }\item[{std\+::string \&}]{dictionary\+File}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja kompresuje plik za pomocą kodowania Huffmana. 
+
+Funkcja odczytuje zawartość pliku wejściowego, buduje drzewo Huffmana na podstawie częstotliwości znaków, przypisuje kody binarne i zapisuje skompresowany tekst oraz słownik kodowania do odpowiednich plików.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Ścieżka do pliku wejściowego. \\
+\hline
+{\em output\+File} & Ścieżka do pliku wyjściowego. \\
+\hline
+{\em dictionary\+File} & Ścieżka do pliku ze słownikiem kodowania. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_huffman_8h_a8c10b04d149a63cca525ebbbcd23d4de}\index{Huffman.h@{Huffman.h}!decompressFile@{decompressFile}}
+\index{decompressFile@{decompressFile}!Huffman.h@{Huffman.h}}
+\doxysubsubsection{\texorpdfstring{decompressFile()}{decompressFile()}}
+{\footnotesize\ttfamily \label{_huffman_8h_a8c10b04d149a63cca525ebbbcd23d4de} 
+void decompress\+File (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input\+File}{, }\item[{std\+::string \&}]{output\+File}{, }\item[{std\+::string \&}]{dictionary\+File}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja dekompresuje plik za pomocą kodowania Huffmana. 
+
+Funkcja odczytuje plik wejściowy oraz słownik kodowania, a następnie odtwarza oryginalną zawartość pliku na podstawie kodów Huffmana.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Ścieżka do pliku wejściowego (skompresowanego). \\
+\hline
+{\em output\+File} & Ścieżka do pliku wyjściowego (zdekompresowanego). \\
+\hline
+{\em dictionary\+File} & Ścieżka do pliku ze słownikiem kodowania. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_huffman_8h_a20a21c1905c9909a9e9b1563759fc1d9}\index{Huffman.h@{Huffman.h}!getCommands@{getCommands}}
+\index{getCommands@{getCommands}!Huffman.h@{Huffman.h}}
+\doxysubsubsection{\texorpdfstring{getCommands()}{getCommands()}}
+{\footnotesize\ttfamily \label{_huffman_8h_a20a21c1905c9909a9e9b1563759fc1d9} 
+bool get\+Commands (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}, }\item[{std\+::string \&}]{input\+File}{, }\item[{std\+::string \&}]{output\+File}{, }\item[{std\+::string \&}]{dictionary\+File}{, }\item[{char \&}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja przetwarza argumenty wiersza poleceń i weryfikuje ich poprawność. 
+
+Funkcja analizuje argumenty wiersza poleceń, przypisuje wartości do odpowiednich parametrów, sprawdza ich poprawność i ustawia domyślny tryb działania (jeśli nie podano trybu). W przypadku błędnych danych lub braku wymaganych argumentów, funkcja zwraca {\ttfamily false}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Liczba argumentów wiersza poleceń. \\
+\hline
+{\em argv} & Tablica argumentów wiersza poleceń. \\
+\hline
+{\em input\+File} & Ścieżka do pliku wejściowego (parametr wyjściowy). \\
+\hline
+{\em output\+File} & Ścieżka do pliku wyjściowego (parametr wyjściowy). \\
+\hline
+{\em dictionary\+File} & Ścieżka do pliku ze słownikiem (parametr wyjściowy). \\
+\hline
+{\em mode} & Tryb działania programu (\textquotesingle{}k\textquotesingle{} dla kompresji, \textquotesingle{}d\textquotesingle{} dla dekompresji) (parametr wyjściowy).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} jeśli wszystkie argumenty są poprawne, {\ttfamily false} w przypadku błędu. 
+\end{DoxyReturn}

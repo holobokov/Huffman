@@ -1,0 +1,91 @@
+\begin{theindex}
+
+  \item {assignCodes}
+    \subitem {Huffman.cpp}, \hyperpage{10}
+
+  \indexspace
+
+  \item {buildHuffmanTree}
+    \subitem {Huffman.cpp}, \hyperpage{10}
+
+  \indexspace
+
+  \item {Compare}, \hyperpage{5}
+    \subitem {operator()}, \hyperpage{5}
+  \item {compressFile}
+    \subitem {Huffman.cpp}, \hyperpage{11}
+    \subitem {Huffman.h}, \hyperpage{15}
+
+  \indexspace
+
+  \item {decompressFile}
+    \subitem {Huffman.cpp}, \hyperpage{11}
+    \subitem {Huffman.h}, \hyperpage{15}
+  \item {deleteTree}
+    \subitem {Huffman.cpp}, \hyperpage{11}
+
+  \indexspace
+
+  \item {encodeText}
+    \subitem {Huffman.cpp}, \hyperpage{12}
+
+  \indexspace
+
+  \item {getCommands}
+    \subitem {Huffman.cpp}, \hyperpage{12}
+    \subitem {Huffman.h}, \hyperpage{16}
+
+  \indexspace
+
+  \item {Huffman.cpp}, \hyperpage{9}
+    \subitem {assignCodes}, \hyperpage{10}
+    \subitem {buildHuffmanTree}, \hyperpage{10}
+    \subitem {compressFile}, \hyperpage{11}
+    \subitem {decompressFile}, \hyperpage{11}
+    \subitem {deleteTree}, \hyperpage{11}
+    \subitem {encodeText}, \hyperpage{12}
+    \subitem {getCommands}, \hyperpage{12}
+    \subitem {readFromDictionary}, \hyperpage{12}
+    \subitem {recreateText}, \hyperpage{13}
+    \subitem {writeCompressedText}, \hyperpage{13}
+    \subitem {writeDecompressedText}, \hyperpage{14}
+    \subitem {writeDictionary}, \hyperpage{14}
+  \item {Huffman.h}, \hyperpage{15}
+    \subitem {compressFile}, \hyperpage{15}
+    \subitem {decompressFile}, \hyperpage{15}
+    \subitem {getCommands}, \hyperpage{16}
+
+  \indexspace
+
+  \item {main}
+    \subitem {main.cpp}, \hyperpage{17}
+  \item {main.cpp}, \hyperpage{17}
+    \subitem {main}, \hyperpage{17}
+
+  \indexspace
+
+  \item {Node}, \hyperpage{6}
+    \subitem {Node}, \hyperpage{6}
+
+  \indexspace
+
+  \item {operator()}
+    \subitem {Compare}, \hyperpage{5}
+
+  \indexspace
+
+  \item {readFromDictionary}
+    \subitem {Huffman.cpp}, \hyperpage{12}
+  \item {recreateText}
+    \subitem {Huffman.cpp}, \hyperpage{13}
+
+  \indexspace
+
+  \item {writeCompressedText}
+    \subitem {Huffman.cpp}, \hyperpage{13}
+  \item {writeDecompressedText}
+    \subitem {Huffman.cpp}, \hyperpage{14}
+  \item {writeDictionary}
+    \subitem {Huffman.cpp}, \hyperpage{14}
+
+\end{theindex}

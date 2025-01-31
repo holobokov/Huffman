@@ -1,0 +1,81 @@
+\doxysection{Node Struct Reference}
+\hypertarget{struct_node}{}\label{struct_node}\index{Node@{Node}}
+
+
+Struktura reprezentująca węzeł drzewa Huffmana.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_node_ad7a34779cad45d997bfd6d3d8043c75f}\label{struct_node_ad7a34779cad45d997bfd6d3d8043c75f} 
+{\bfseries Node} ()
+\begin{DoxyCompactList}\small\item\em Konstruktor domyślny. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_af58d13633a3cd390fa987205d579b16d}{Node}} (char s, int i)
+\begin{DoxyCompactList}\small\item\em Konstruktor liścia. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node_a9522f4d3bfddc7b72e1e60192d06f20a}{Node}} (int i, \mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}l=nullptr, \mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}r=nullptr)
+\begin{DoxyCompactList}\small\item\em Konstruktor węzła wewnętrznego. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{struct_node_a94c9686e27f05bedd604d347d5bad449}\label{struct_node_a94c9686e27f05bedd604d347d5bad449} 
+char {\bfseries data}
+\item 
+\Hypertarget{struct_node_a93e1b0f2d619b5ce1b19d982e967e579}\label{struct_node_a93e1b0f2d619b5ce1b19d982e967e579} 
+int {\bfseries freq}
+\item 
+\Hypertarget{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee}\label{struct_node_ab8c667ac8fdb120ed4c031682a9cdaee} 
+\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries left}
+\item 
+\Hypertarget{struct_node_a7328862eaa6dea28018326549b3294d3}\label{struct_node_a7328862eaa6dea28018326549b3294d3} 
+\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} {\bfseries right}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Struktura reprezentująca węzeł drzewa Huffmana. 
+
+Węzeł drzewa Huffmana, przechowuje symbol, częstotliwość i wskaźniki na dzieci. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{struct_node_af58d13633a3cd390fa987205d579b16d}\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \label{struct_node_af58d13633a3cd390fa987205d579b16d} 
+Node\+::\+Node (\begin{DoxyParamCaption}\item[{char}]{s}{, }\item[{int}]{i}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor liścia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em s} & Symbol (znak). \\
+\hline
+{\em i} & Częstotliwość wystąpień symbolu. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{struct_node_a9522f4d3bfddc7b72e1e60192d06f20a}\index{Node@{Node}!Node@{Node}}
+\index{Node@{Node}!Node@{Node}}
+\doxysubsubsection{\texorpdfstring{Node()}{Node()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \label{struct_node_a9522f4d3bfddc7b72e1e60192d06f20a} 
+Node\+::\+Node (\begin{DoxyParamCaption}\item[{int}]{i}{, }\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}}]{l}{ = {\ttfamily nullptr}, }\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}}]{r}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Konstruktor węzła wewnętrznego. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em i} & Suma częstotliwości dzieci. \\
+\hline
+{\em l} & Wskaźnik na lewe dziecko. \\
+\hline
+{\em r} & Wskaźnik na prawe dziecko. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_huffman_8cpp}{Huffman.\+cpp}}\end{DoxyCompactItemize}

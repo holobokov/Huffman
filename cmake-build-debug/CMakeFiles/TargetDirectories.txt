@@ -1,0 +1,3 @@
+/Users/golobokov/Desktop/PPK15/bbcf2028-gr15-repo/projekt/project/cmake-build-debug/CMakeFiles/project.dir
+/Users/golobokov/Desktop/PPK15/bbcf2028-gr15-repo/projekt/project/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/golobokov/Desktop/PPK15/bbcf2028-gr15-repo/projekt/project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

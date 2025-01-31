@@ -1,0 +1,82 @@
+\doxysection{main.\+cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{main.cpp@{main.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include "{}Huffman.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}{main}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\begin{DoxyCompactList}\small\item\em Główna funkcja obsługująca kompresję i dekompresję plików za pomocą kodowania Huffmana. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+Author Oleksandr Holobokov (\href{mailto:oh318935@student.polsl.pl}{\texttt{ oh318935@student.\+polsl.\+pl}}) \begin{DoxyDate}{Date}
+29.\+01.\+2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_a0ddf1224851353fc92bfbff6f499fa97} 
+int main (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}}\end{DoxyParamCaption})}
+
+
+
+Główna funkcja obsługująca kompresję i dekompresję plików za pomocą kodowania Huffmana. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Liczba argumentów wiersza poleceń. \\
+\hline
+{\em argv} & Tablica argumentów wiersza poleceń. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+int Zwraca 0 w przypadku pomyślnego wykonania, 1 w przypadku błędnych argumentów wiersza poleceń. 
+\end{DoxyReturn}
+Parsuje argumenty wiersza poleceń.
+
+Funkcja ustawia wartości zmiennych input\+File, output\+File, dictionary\+File oraz mode na podstawie dostarczonych argumentów wiersza poleceń.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Liczba argumentów wiersza poleceń. \\
+\hline
+{\em argv} & Tablica argumentów wiersza poleceń. \\
+\hline
+{\em input\+File} & Nazwa pliku wejściowego do przetworzenia. \\
+\hline
+{\em output\+File} & Nazwa pliku wyjściowego, w którym zostaną zapisane wyniki. \\
+\hline
+{\em dictionary\+File} & Nazwa pliku słownika używanego w kodowaniu Huffmana. \\
+\hline
+{\em mode} & Znak określający tryb działania (\textquotesingle{}k\textquotesingle{} dla kompresji, \textquotesingle{}d\textquotesingle{} dla dekompresji). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool Zwraca true, jeśli argumenty wiersza poleceń są poprawne, w przeciwnym razie false.
+\end{DoxyReturn}
+Kompresuje plik wejściowy za pomocą kodowania Huffmana.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Nazwa pliku wejściowego do skompresowania. \\
+\hline
+{\em output\+File} & Nazwa pliku wyjściowego, w którym zostaną zapisane dane skompresowane. \\
+\hline
+{\em dictionary\+File} & Nazwa pliku słownika, w którym zostaną zapisane kody Huffmana.\\
+\hline
+\end{DoxyParams}
+Dekompresuje plik wejściowy za pomocą kodowania Huffmana.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Nazwa pliku wejściowego do zdekompresowania. \\
+\hline
+{\em output\+File} & Nazwa pliku wyjściowego, w którym zostaną zapisane dane zdekompresowane. \\
+\hline
+{\em dictionary\+File} & Nazwa pliku słownika zawierającego kody Huffmana.\\
+\hline
+\end{DoxyParams}

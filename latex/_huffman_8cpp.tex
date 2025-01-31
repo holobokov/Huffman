@@ -1,0 +1,312 @@
+\doxysection{Huffman.\+cpp File Reference}
+\hypertarget{_huffman_8cpp}{}\label{_huffman_8cpp}\index{Huffman.cpp@{Huffman.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$bitset$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include "{}Huffman.\+h"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_node}{Node}}
+\begin{DoxyCompactList}\small\item\em Struktura reprezentująca węzeł drzewa Huffmana. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_compare}{Compare}}
+\begin{DoxyCompactList}\small\item\em Struktura porównująca węzły na podstawie częstotliwości. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{_huffman_8cpp_a97ee70a8770dc30d06c744b24eb2fcfc}\label{_huffman_8cpp_a97ee70a8770dc30d06c744b24eb2fcfc} 
+void {\bfseries help} ()
+\begin{DoxyCompactList}\small\item\em Wyświetla instrukcję obsługi programu. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_huffman_8cpp_a20a21c1905c9909a9e9b1563759fc1d9}{get\+Commands}} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]}, std\+::string \&input\+File, std\+::string \&output\+File, std\+::string \&dictionary\+File, char \&mode)
+\begin{DoxyCompactList}\small\item\em Funkcja przetwarza argumenty wiersza poleceń i weryfikuje ich poprawność. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{_huffman_8cpp_a6b1b3392d61159f6d1b8865fb441a46d}{build\+Huffman\+Tree}} (const std\+::vector$<$ char $>$ \&buffer)
+\begin{DoxyCompactList}\small\item\em Buduje drzewo Huffmana na podstawie częstotliwości symboli. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_huffman_8cpp_a8a8b1818642bb09ce2b4c4cba585c614}{assign\+Codes}} (\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}root, std\+::string code, std\+::map$<$ char, std\+::string $>$ \&huffman\+Codes)
+\begin{DoxyCompactList}\small\item\em Przypisuje kody Huffmana liściom drzewa. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_huffman_8cpp_a80a114e1cd388dd0d685e92c0c599d37}{delete\+Tree}} (\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}root)
+\begin{DoxyCompactList}\small\item\em Usuwa drzewo Huffmana z pamięci. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{_huffman_8cpp_a73586b45facc5621ed1ab85067999681}{encode\+Text}} (std\+::vector$<$ char $>$ \&buffer, std\+::map$<$ char, std\+::string $>$ \&huffman\+Codes)
+\begin{DoxyCompactList}\small\item\em Koduje tekst na podstawie kodów Huffmana. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_huffman_8cpp_a148c3e662e95a941e9262b4e630d7ce0}{write\+Compressed\+Text}} (std\+::string compressed\+Text, std\+::string \&output\+File)
+\begin{DoxyCompactList}\small\item\em Zapisuje skompresowany tekst do pliku w formie binarnej. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_huffman_8cpp_a9c71c5d05c3252a8e7f39e18f2bd9d94}{write\+Dictionary}} (std\+::map$<$ char, std\+::string $>$ \&huffman\+Codes, std\+::string \&dictionary\+File)
+\begin{DoxyCompactList}\small\item\em Zapisuje słownik kodowania Huffmana do pliku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_huffman_8cpp_ae324ac2960948cc3596aa1417d15bf1a}{read\+From\+Dictionary}} (std\+::map$<$ char, std\+::string $>$ \&huffman\+Codes, std\+::string \&dictionary\+File)
+\begin{DoxyCompactList}\small\item\em Odczytuje słownik kodowania Huffmana z pliku. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_huffman_8cpp_a348674f5976d4b0bc3af844fdfe82de0}{recreate\+Text}} (std\+::map$<$ char, std\+::string $>$ \&huffman\+Codes, std\+::string \&bits, std\+::string \&recreated\+Text)
+\begin{DoxyCompactList}\small\item\em Dekoduje ciąg bitów na oryginalny tekst na podstawie słownika Huffmana. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{_huffman_8cpp_a32556aecfc6cd760cfe15dfaee909a8e}{write\+Decompressed\+Text}} (std\+::string compressed\+Text, std\+::string \&output\+File)
+\begin{DoxyCompactList}\small\item\em Zapisuje zdekompresowany tekst do pliku wyjściowego. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_huffman_8cpp_abad8750dc3bbe44b783777199e66f91e}{compress\+File}} (std\+::string \&input\+File, std\+::string \&output\+File, std\+::string \&dictionary\+File)
+\begin{DoxyCompactList}\small\item\em Funkcja kompresuje plik za pomocą kodowania Huffmana. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{_huffman_8cpp_a8c10b04d149a63cca525ebbbcd23d4de}{decompress\+File}} (std\+::string \&input\+File, std\+::string \&output\+File, std\+::string \&dictionary\+File)
+\begin{DoxyCompactList}\small\item\em Funkcja dekompresuje plik za pomocą kodowania Huffmana. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+@\+Author Oleksandr Holobokov (\href{mailto:oh318935@student.polsl.pl}{\texttt{ oh318935@student.\+polsl.\+pl}}) \begin{DoxyDate}{Date}
+29.\+01.\+2025 
+\end{DoxyDate}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{_huffman_8cpp_a8a8b1818642bb09ce2b4c4cba585c614}\index{Huffman.cpp@{Huffman.cpp}!assignCodes@{assignCodes}}
+\index{assignCodes@{assignCodes}!Huffman.cpp@{Huffman.cpp}}
+\doxysubsubsection{\texorpdfstring{assignCodes()}{assignCodes()}}
+{\footnotesize\ttfamily \label{_huffman_8cpp_a8a8b1818642bb09ce2b4c4cba585c614} 
+void assign\+Codes (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}}]{root}{, }\item[{std\+::string}]{code}{, }\item[{std\+::map$<$ char, std\+::string $>$ \&}]{huffman\+Codes}{}\end{DoxyParamCaption})}
+
+
+
+Przypisuje kody Huffmana liściom drzewa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Korzeń drzewa Huffmana. \\
+\hline
+{\em code} & Aktualny kod binarny. \\
+\hline
+{\em huffman\+Codes} & Mapa przechowująca przypisane kody. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_huffman_8cpp_a6b1b3392d61159f6d1b8865fb441a46d}\index{Huffman.cpp@{Huffman.cpp}!buildHuffmanTree@{buildHuffmanTree}}
+\index{buildHuffmanTree@{buildHuffmanTree}!Huffman.cpp@{Huffman.cpp}}
+\doxysubsubsection{\texorpdfstring{buildHuffmanTree()}{buildHuffmanTree()}}
+{\footnotesize\ttfamily \label{_huffman_8cpp_a6b1b3392d61159f6d1b8865fb441a46d} 
+\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*} build\+Huffman\+Tree (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ char $>$ \&}]{buffer}{}\end{DoxyParamCaption})}
+
+
+
+Buduje drzewo Huffmana na podstawie częstotliwości symboli. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Bufor zawierający znaki z pliku wejściowego. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Wskaźnik na korzeń drzewa Huffmana. 
+\end{DoxyReturn}
+\Hypertarget{_huffman_8cpp_abad8750dc3bbe44b783777199e66f91e}\index{Huffman.cpp@{Huffman.cpp}!compressFile@{compressFile}}
+\index{compressFile@{compressFile}!Huffman.cpp@{Huffman.cpp}}
+\doxysubsubsection{\texorpdfstring{compressFile()}{compressFile()}}
+{\footnotesize\ttfamily \label{_huffman_8cpp_abad8750dc3bbe44b783777199e66f91e} 
+void compress\+File (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input\+File}{, }\item[{std\+::string \&}]{output\+File}{, }\item[{std\+::string \&}]{dictionary\+File}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja kompresuje plik za pomocą kodowania Huffmana. 
+
+Funkcja odczytuje zawartość pliku wejściowego, buduje drzewo Huffmana na podstawie częstotliwości znaków, przypisuje kody binarne i zapisuje skompresowany tekst oraz słownik kodowania do odpowiednich plików.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Ścieżka do pliku wejściowego. \\
+\hline
+{\em output\+File} & Ścieżka do pliku wyjściowego. \\
+\hline
+{\em dictionary\+File} & Ścieżka do pliku ze słownikiem kodowania. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_huffman_8cpp_a8c10b04d149a63cca525ebbbcd23d4de}\index{Huffman.cpp@{Huffman.cpp}!decompressFile@{decompressFile}}
+\index{decompressFile@{decompressFile}!Huffman.cpp@{Huffman.cpp}}
+\doxysubsubsection{\texorpdfstring{decompressFile()}{decompressFile()}}
+{\footnotesize\ttfamily \label{_huffman_8cpp_a8c10b04d149a63cca525ebbbcd23d4de} 
+void decompress\+File (\begin{DoxyParamCaption}\item[{std\+::string \&}]{input\+File}{, }\item[{std\+::string \&}]{output\+File}{, }\item[{std\+::string \&}]{dictionary\+File}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja dekompresuje plik za pomocą kodowania Huffmana. 
+
+Funkcja odczytuje plik wejściowy oraz słownik kodowania, a następnie odtwarza oryginalną zawartość pliku na podstawie kodów Huffmana.
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+File} & Ścieżka do pliku wejściowego (skompresowanego). \\
+\hline
+{\em output\+File} & Ścieżka do pliku wyjściowego (zdekompresowanego). \\
+\hline
+{\em dictionary\+File} & Ścieżka do pliku ze słownikiem kodowania. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_huffman_8cpp_a80a114e1cd388dd0d685e92c0c599d37}\index{Huffman.cpp@{Huffman.cpp}!deleteTree@{deleteTree}}
+\index{deleteTree@{deleteTree}!Huffman.cpp@{Huffman.cpp}}
+\doxysubsubsection{\texorpdfstring{deleteTree()}{deleteTree()}}
+{\footnotesize\ttfamily \label{_huffman_8cpp_a80a114e1cd388dd0d685e92c0c599d37} 
+void delete\+Tree (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{struct_node}{Node}} \texorpdfstring{$\ast$}{*}}]{root}{}\end{DoxyParamCaption})}
+
+
+
+Usuwa drzewo Huffmana z pamięci. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em root} & Korzeń drzewa Huffmana. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_huffman_8cpp_a73586b45facc5621ed1ab85067999681}\index{Huffman.cpp@{Huffman.cpp}!encodeText@{encodeText}}
+\index{encodeText@{encodeText}!Huffman.cpp@{Huffman.cpp}}
+\doxysubsubsection{\texorpdfstring{encodeText()}{encodeText()}}
+{\footnotesize\ttfamily \label{_huffman_8cpp_a73586b45facc5621ed1ab85067999681} 
+std\+::string encode\+Text (\begin{DoxyParamCaption}\item[{std\+::vector$<$ char $>$ \&}]{buffer}{, }\item[{std\+::map$<$ char, std\+::string $>$ \&}]{huffman\+Codes}{}\end{DoxyParamCaption})}
+
+
+
+Koduje tekst na podstawie kodów Huffmana. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em buffer} & Bufor zawierający znaki z pliku wejściowego. \\
+\hline
+{\em huffman\+Codes} & Mapa przechowująca przypisane kody. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Zakodowany tekst w formacie binarnym. 
+\end{DoxyReturn}
+\Hypertarget{_huffman_8cpp_a20a21c1905c9909a9e9b1563759fc1d9}\index{Huffman.cpp@{Huffman.cpp}!getCommands@{getCommands}}
+\index{getCommands@{getCommands}!Huffman.cpp@{Huffman.cpp}}
+\doxysubsubsection{\texorpdfstring{getCommands()}{getCommands()}}
+{\footnotesize\ttfamily \label{_huffman_8cpp_a20a21c1905c9909a9e9b1563759fc1d9} 
+bool get\+Commands (\begin{DoxyParamCaption}\item[{int}]{argc}{, }\item[{char \texorpdfstring{$\ast$}{*}}]{argv}{\mbox{[}$\,$\mbox{]}, }\item[{std\+::string \&}]{input\+File}{, }\item[{std\+::string \&}]{output\+File}{, }\item[{std\+::string \&}]{dictionary\+File}{, }\item[{char \&}]{mode}{}\end{DoxyParamCaption})}
+
+
+
+Funkcja przetwarza argumenty wiersza poleceń i weryfikuje ich poprawność. 
+
+Funkcja analizuje argumenty wiersza poleceń, przypisuje wartości do odpowiednich parametrów, sprawdza ich poprawność i ustawia domyślny tryb działania (jeśli nie podano trybu). W przypadku błędnych danych lub braku wymaganych argumentów, funkcja zwraca {\ttfamily false}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Liczba argumentów wiersza poleceń. \\
+\hline
+{\em argv} & Tablica argumentów wiersza poleceń. \\
+\hline
+{\em input\+File} & Ścieżka do pliku wejściowego (parametr wyjściowy). \\
+\hline
+{\em output\+File} & Ścieżka do pliku wyjściowego (parametr wyjściowy). \\
+\hline
+{\em dictionary\+File} & Ścieżka do pliku ze słownikiem (parametr wyjściowy). \\
+\hline
+{\em mode} & Tryb działania programu (\textquotesingle{}k\textquotesingle{} dla kompresji, \textquotesingle{}d\textquotesingle{} dla dekompresji) (parametr wyjściowy).\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+{\ttfamily true} jeśli wszystkie argumenty są poprawne, {\ttfamily false} w przypadku błędu. 
+\end{DoxyReturn}
+\Hypertarget{_huffman_8cpp_ae324ac2960948cc3596aa1417d15bf1a}\index{Huffman.cpp@{Huffman.cpp}!readFromDictionary@{readFromDictionary}}
+\index{readFromDictionary@{readFromDictionary}!Huffman.cpp@{Huffman.cpp}}
+\doxysubsubsection{\texorpdfstring{readFromDictionary()}{readFromDictionary()}}
+{\footnotesize\ttfamily \label{_huffman_8cpp_ae324ac2960948cc3596aa1417d15bf1a} 
+void read\+From\+Dictionary (\begin{DoxyParamCaption}\item[{std\+::map$<$ char, std\+::string $>$ \&}]{huffman\+Codes}{, }\item[{std\+::string \&}]{dictionary\+File}{}\end{DoxyParamCaption})}
+
+
+
+Odczytuje słownik kodowania Huffmana z pliku. 
+
+Funkcja odczytuje zawartość pliku tekstowego {\ttfamily dictionary\+File}, w którym każda linia zawiera symbol (lub specjalny znak, jak spacja czy nowa linia) oraz odpowiadający mu kod Huffmana. Mapuje symbole do ich kodów w przekazanej mapie {\ttfamily huffman\+Codes}.
+
+Format pliku\+:
+\begin{DoxyItemize}
+\item \mbox{[}symbol\mbox{]}\mbox{[}kod\mbox{]}\mbox{[}~\newline
+\mbox{]}
+\item Pusta linia reprezentuje znak nowej linii ({\ttfamily \textbackslash{}n}), a kolejna linia zawiera odpowiadający mu kod.
+\end{DoxyItemize}
+
+
+\begin{DoxyParams}{Parameters}
+{\em huffman\+Codes} & Mapa, która będzie zawierać odczytane symbole i ich kody Huffmana. \\
+\hline
+{\em dictionary\+File} & Ścieżka do pliku zawierającego słownik kodowania Huffmana. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_huffman_8cpp_a348674f5976d4b0bc3af844fdfe82de0}\index{Huffman.cpp@{Huffman.cpp}!recreateText@{recreateText}}
+\index{recreateText@{recreateText}!Huffman.cpp@{Huffman.cpp}}
+\doxysubsubsection{\texorpdfstring{recreateText()}{recreateText()}}
+{\footnotesize\ttfamily \label{_huffman_8cpp_a348674f5976d4b0bc3af844fdfe82de0} 
+void recreate\+Text (\begin{DoxyParamCaption}\item[{std\+::map$<$ char, std\+::string $>$ \&}]{huffman\+Codes}{, }\item[{std\+::string \&}]{bits}{, }\item[{std\+::string \&}]{recreated\+Text}{}\end{DoxyParamCaption})}
+
+
+
+Dekoduje ciąg bitów na oryginalny tekst na podstawie słownika Huffmana. 
+
+Funkcja wykorzystuje mapę {\ttfamily huffman\+Codes}, aby dekodować ciąg {\ttfamily bits} (ciąg znaków \textquotesingle{}0\textquotesingle{} i \textquotesingle{}1\textquotesingle{}) na oryginalny tekst, który jest zapisywany w {\ttfamily recreated\+Text}. Dla każdego fragmentu bitów, funkcja dopasowuje kod do odpowiedniego symbolu w słowniku Huffmana.
+
+
+\begin{DoxyParams}{Parameters}
+{\em huffman\+Codes} & Mapa zawierająca symbole i odpowiadające im kody Huffmana. \\
+\hline
+{\em bits} & Skompresowany ciąg bitów w postaci ciągu znaków \textquotesingle{}0\textquotesingle{} i \textquotesingle{}1\textquotesingle{}. \\
+\hline
+{\em recreated\+Text} & Wyjściowy odtworzony tekst, wypełniany przez funkcję. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{_huffman_8cpp_a148c3e662e95a941e9262b4e630d7ce0}\index{Huffman.cpp@{Huffman.cpp}!writeCompressedText@{writeCompressedText}}
+\index{writeCompressedText@{writeCompressedText}!Huffman.cpp@{Huffman.cpp}}
+\doxysubsubsection{\texorpdfstring{writeCompressedText()}{writeCompressedText()}}
+{\footnotesize\ttfamily \label{_huffman_8cpp_a148c3e662e95a941e9262b4e630d7ce0} 
+bool write\+Compressed\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{compressed\+Text}{, }\item[{std\+::string \&}]{output\+File}{}\end{DoxyParamCaption})}
+
+
+
+Zapisuje skompresowany tekst do pliku w formie binarnej. 
+
+Funkcja przetwarza skompresowany tekst (ciąg znaków \textquotesingle{}0\textquotesingle{} i \textquotesingle{}1\textquotesingle{}) na bajty, a następnie zapisuje te bajty w pliku binarnym. Każde 8 bitów (1 bajt) z ciągu wejściowego jest przekształcane na wartość typu {\ttfamily unsigned char}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em compressed\+Text} & Skompresowany tekst w postaci ciągu \textquotesingle{}0\textquotesingle{} i \textquotesingle{}1\textquotesingle{}. \\
+\hline
+{\em output\+File} & Nazwa pliku wyjściowego, w którym dane mają zostać zapisane.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, jeśli zapis zakończył się sukcesem, false w przypadku błędu (np. brak dostępu do pliku). 
+\end{DoxyReturn}
+\Hypertarget{_huffman_8cpp_a32556aecfc6cd760cfe15dfaee909a8e}\index{Huffman.cpp@{Huffman.cpp}!writeDecompressedText@{writeDecompressedText}}
+\index{writeDecompressedText@{writeDecompressedText}!Huffman.cpp@{Huffman.cpp}}
+\doxysubsubsection{\texorpdfstring{writeDecompressedText()}{writeDecompressedText()}}
+{\footnotesize\ttfamily \label{_huffman_8cpp_a32556aecfc6cd760cfe15dfaee909a8e} 
+bool write\+Decompressed\+Text (\begin{DoxyParamCaption}\item[{std\+::string}]{compressed\+Text}{, }\item[{std\+::string \&}]{output\+File}{}\end{DoxyParamCaption})}
+
+
+
+Zapisuje zdekompresowany tekst do pliku wyjściowego. 
+
+Funkcja zapisuje ciąg znaków zdekompresowanego tekstu do pliku wyjściowego. Jeśli plik nie może zostać otwarty, wyświetlany jest komunikat o błędzie, a funkcja zwraca wartość {\ttfamily false}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em compressed\+Text} & Zdekompresowany tekst, który ma zostać zapisany do pliku. \\
+\hline
+{\em output\+File} & Nazwa pliku wyjściowego, w którym tekst zostanie zapisany. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, jeśli zapis zakończył się sukcesem; false w przypadku błędu. 
+\end{DoxyReturn}
+\Hypertarget{_huffman_8cpp_a9c71c5d05c3252a8e7f39e18f2bd9d94}\index{Huffman.cpp@{Huffman.cpp}!writeDictionary@{writeDictionary}}
+\index{writeDictionary@{writeDictionary}!Huffman.cpp@{Huffman.cpp}}
+\doxysubsubsection{\texorpdfstring{writeDictionary()}{writeDictionary()}}
+{\footnotesize\ttfamily \label{_huffman_8cpp_a9c71c5d05c3252a8e7f39e18f2bd9d94} 
+void write\+Dictionary (\begin{DoxyParamCaption}\item[{std\+::map$<$ char, std\+::string $>$ \&}]{huffman\+Codes}{, }\item[{std\+::string \&}]{dictionary\+File}{}\end{DoxyParamCaption})}
+
+
+
+Zapisuje słownik kodowania Huffmana do pliku. 
+
+Funkcja zapisuje zawartość mapy {\ttfamily huffman\+Codes} do pliku tekstowego, gdzie każdy klucz (symbol) jest zapisany wraz z odpowiadającym mu kodem Huffmana w formacie\+: \mbox{[}symbol\mbox{]}\mbox{[}kod\mbox{]}\mbox{[}~\newline
+\mbox{]}
+
+W przypadku symboli specjalnych, takich jak spacja lub znak nowej linii, zapisywane są odpowiednie znaki w pliku (np. spacja pozostaje spacją, a nowa linia jest zapisana w osobnym wierszu).
+
+
+\begin{DoxyParams}{Parameters}
+{\em huffman\+Codes} & Mapa przechowująca symbole i ich odpowiadające kody Huffmana. \\
+\hline
+{\em dictionary\+File} & Ścieżka do pliku, w którym słownik ma zostać zapisany. \\
+\hline
+\end{DoxyParams}
