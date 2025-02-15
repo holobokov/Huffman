@@ -219,6 +219,11 @@ std::string encodeText(std::vector<char> &buffer, std::map<char, std::string> &h
         }
     }
 
+    //ostatnio dodane
+    while (encodedText.length() % 8 != 0) {
+        encodedText += "0";
+    }
+
     return encodedText;
 }
 
